@@ -5,6 +5,35 @@
 # They are provided by a third-party and are governed by
 # separate terms of service, privacy policy, and support
 # documentation.
+- name: PDF Paper Generator
+  # You may pin to the exact commit or the version.
+  # uses: rseng/pdf-generator@7e928f1584da1a891361ade6d052032962ebfba3
+  uses: rseng/pdf-generator@0.0.4
+  with:
+    # The path to the paper.md file. Defaults to JoSS convention, paper/paper.md
+    paper_markdown: # optional
+    # If you want to render an entire folder of markdowns (recursive) set this variable
+    paper_dir: # optional
+    # Only used when paper_dir is defined, write output papers to this directory.
+    output_dir: # optional
+    # The path to the PDF to be generated. Defaults to paper/paper.pdf
+    paper_outfile: # optional, default is paper.pdf
+    # If needed, an optional bibliography file (prefix .bib)
+    bibtex: # optional
+    # if not the root of the repository, change into this directory first
+    workdir: # optional
+    # A png logo file to render in the top left of the paper.
+    png_logo: # optional
+    # the latex template to use. Defaults to a JoSS template.
+    latex_template: # optional, default is /code/templates/latex.template.joss
+    # one of minimal or pdf.
+    pdf_type: # optional, default is minimal
+    # turn on verbose output (default is false)
+    verbose: # optional
+    # a file with one pair of variables per line for the template
+    variables_file: # optional
+    # a file with variable mappings to do for the template
+    mapping_file: # optional
 
 name: Java CI with Maven
 
